@@ -1,0 +1,14 @@
+.social-media-footer {
+    background: rgb(86, 190, 167);
+    width: 100vw;
+    height: 10vh;
+}
+
+.social-media-list {
+    text-align: center;
+}
+
+.social-media-link {
+    display: inline-block;
+    padding: 20px;
+}

@@ -1,0 +1,19 @@
+.main-content {
+    background: rgb(107, 229, 185);
+    height: 100vw;
+    text-align: center;
+}
+
+.nav-container {
+    width: 100vw;
+    background:  rgb(79, 126, 229);
+}
+
+.nav-link {
+    padding: 7vw;
+    color: black;
+}
+
+.nav-link:active, .nav-link:visited {
+    color: lightblue;
+}
