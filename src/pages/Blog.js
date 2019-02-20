@@ -5,7 +5,7 @@ class Blog extends Component {
   render() {
 
     return (
-        <div class="main-content">
+        <div className="main-content">
           <p>navigated to: BLOG</p>
         </div>
     )

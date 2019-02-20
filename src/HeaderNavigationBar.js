@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import firebase from './Firebase.js' ;
 import { Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Events from './pages/Events';
@@ -9,6 +10,10 @@ import JobBoard from './pages/JobBoard';
 import Blog from './pages/Blog';
 
 class HeaderNavigationBar extends Component {
+
+    componentDidMount(){
+        // firebase.database().ref().child("X").on('value' , {...});
+    }
 
   render() {
 

@@ -2,10 +2,13 @@
     background: rgb(86, 190, 167);
     width: 100vw;
     height: 10vh;
+    position: fixed;
+    bottom: 0;
 }
 
 .social-media-list {
     text-align: center;
+    margin: 0;
 }
 
 .social-media-link {

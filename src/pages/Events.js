@@ -5,7 +5,7 @@ class Events extends Component {
   render() {
 
     return (
-        <div class="main-content">
+        <div className="main-content">
           <p>navigated to: EVENTS</p>
         </div>
     )

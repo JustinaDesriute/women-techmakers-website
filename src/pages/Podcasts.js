@@ -5,7 +5,7 @@ class Podcasts extends Component {
     render() {
 
         return (
-            <div class="main-content">
+            <div className="main-content">
               <p>navigated to: PODCASTS</p>
             </div>
         )
