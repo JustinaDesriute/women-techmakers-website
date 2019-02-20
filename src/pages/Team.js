@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../wmt.png';
+import DonutChart from '../DonutChart';
 
 class Team extends Component {
 
@@ -21,6 +22,7 @@ class Team extends Component {
                   rel="noopener noreferrer">
                   Meet us!
                 </a>
+                <DonutChart></DonutChart>
             </section>
           </div>
         )
