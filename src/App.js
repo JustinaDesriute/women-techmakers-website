@@ -6,7 +6,9 @@ import './HeaderNavigationBar.css';
 import './SocialMediaFooter.css';
 
 class App extends Component {
+
   render() {
+
     return (
       <div className="content-wrapper">
           <HeaderNavigationBar></HeaderNavigationBar>
