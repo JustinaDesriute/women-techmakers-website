@@ -7,6 +7,7 @@ class Blog extends Component {
     super();
     this.state = {
       blogpost: "",
+      blogimage: "",
     };
   }
 
@@ -16,9 +17,11 @@ class Blog extends Component {
       db.collection('blogposts').get().then((snapshot) => {
         snapshot.docs.forEach(doc => {
           let fetcheddata = Object.values(doc.data());
-          let result = fetcheddata[0];
+          let result = fetcheddata[1];
+          let img = fetcheddata[0];
           this.setState({
             blogpost: result,
+            blogimage: img,
           });
         })
       });
@@ -31,6 +34,7 @@ class Blog extends Component {
           <button onClick={this.getBlogPosts}>
             fetch team member from firebase
           </button>
+          <img src={this.state.blogimage}/>
           <p>Blog post fetched from firebase: {this.state.blogpost}</p>
         </div>
     )
