@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logo from '../wmt.png';
-import DonutChart from '../DonutChart';
 import firebase from '../FirebaseConfig';
+import DonutChart from '../DonutChart';
 import './Team.css';
 
 class Team extends Component {
@@ -21,7 +20,7 @@ class Team extends Component {
         snapshot.docs.forEach(doc => {
           let fetcheddata = Object.values(doc.data());
           let result = fetcheddata[0];
-          let photo = fetcheddata[2];
+          let photo = fetcheddata[1];
           this.setState({
             firebasedata: result,
             memberphoto: photo
@@ -41,19 +40,8 @@ class Team extends Component {
             <p>the team member fetched from firebase: {this.state.firebasedata}</p>
             <img className="team-member-photo" src={this.state.memberphoto}/>
           </div>
-            <img src={logo} className="App-logo" alt="logo" />
-              <p>
-                Welcome to WomenTechMakers Frankfurt!
-              </p>
-              <a
-                className="App-link"
-                href="https://www.linkedin.com/company/women-techmakers-frankfurt/"
-                target="_blank"
-                rel="noopener noreferrer">
-                Meet us!
-              </a>
-          {/* just a demo chart to show that d3.js renders */}
-          <DonutChart></DonutChart>
+           {/* just a demo chart to show that d3.js renders */}
+           <DonutChart></DonutChart>
         </div>
       )
       }

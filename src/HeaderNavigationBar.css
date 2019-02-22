@@ -1,20 +1,28 @@
 .main-content {
     background: rgb(107, 229, 185);
-    /* height: 100vh; */
+    height: 100vh;
     width: 100vw;
     text-align: center;
 }
 
 .nav-container {
-    /* width: 100vw; */
     background:  rgb(79, 126, 229);
+    display: flex;
+    justify-content: space-between;
+    padding: 2vmin;
+}
+
+.navigation-link-container {
 }
 
 .nav-link {
-    padding: 7vw;
     color: black;
 }
 
 .nav-link:active, .nav-link:visited {
     color: lightblue;
+}
+
+p {
+    margin: 0;
 }

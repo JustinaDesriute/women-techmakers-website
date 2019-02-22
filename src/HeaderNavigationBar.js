@@ -13,28 +13,44 @@ class HeaderNavigationBar extends Component {
 
     return (
       <div>
-          <div className="nav-container">
-            <Link
-                to='/events'
-                className='nav-link'>Events
-            </Link>
-            <Link
-                to='/podcasts'
-                className='nav-link'>Podcasts
-            </Link>
-            <Link
-                to='/mentoring'
-                className='nav-link'>Mentoring
-            </Link>
-            <Link
-                to='/jobboard'
-                className='nav-link'>Job Board
-            </Link>
-            <Link
-                to='/blog'
-                className='nav-link'>Blog
-            </Link>
-
+            <div className="nav-container">
+                <div className="navigation-link-container">
+                    <Link
+                        to='/team'
+                        className='nav-link'>Team
+                    </Link>
+                </div>
+                <div className="navigation-link-container">
+                    <Link
+                        to='/events'
+                        className='nav-link'>Events
+                    </Link>
+                </div>
+                <div className="navigation-link-container">
+                    <Link
+                        to='/podcasts'
+                        className='nav-link'>Podcasts
+                    </Link>
+                </div>
+                <div className="navigation-link-container">
+                    <Link
+                        to='/mentoring'
+                        className='nav-link'>Mentoring
+                    </Link>
+                </div>
+                <div className="navigation-link-container">
+                    <Link
+                        to='/jobboard'
+                        className='nav-link'>Job Board
+                    </Link>
+                </div>
+                <div className="navigation-link-container">
+                    <Link
+                        to='/blog'
+                        className='nav-link'>Blog
+                    </Link>
+                </div>
+            </div>
             <Route exact path='/' render={() => (
                 <Team/>
             )} />
@@ -56,7 +72,6 @@ class HeaderNavigationBar extends Component {
             <Route exact path='/blog' render={() => (
                 <Blog/>
             )} />
-          </div>
       </div>
     )
   }
