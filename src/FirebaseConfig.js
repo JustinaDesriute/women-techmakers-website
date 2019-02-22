@@ -12,12 +12,4 @@ let config = {
 
 firebase.initializeApp(config);
 
-const db = firebase.firestore();
-
-// db.collection('team').get().then((snapshot) => {
-//   snapshot.docs.forEach(doc => {
-//     console.log(doc.data());
-//   })
-// });
-
 export default firebase;
