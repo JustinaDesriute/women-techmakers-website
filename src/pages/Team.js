@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import firebase from '../FirebaseConfig';
-import DonutChart from '../DonutChart';
+import BarChart from '../BarChart';
 import './Team.css';
 
 class Team extends Component {
@@ -8,40 +7,17 @@ class Team extends Component {
   constructor() {
     super();
     this.state = {
-      firebasedata: "",
-      memberphoto: "",
+      data: [12, 5, 6, 6, 9, 10],
+      width: 700,
+      height: 500,
+      id: "chart"
     };
   }
-
-    getFirebaseInfo = e => {
-      const db = firebase.firestore();
-
-      db.collection('team').get().then((snapshot) => {
-        snapshot.docs.forEach(doc => {
-          let fetcheddata = Object.values(doc.data());
-          let result = fetcheddata[0];
-          let photo = fetcheddata[1];
-          this.setState({
-            firebasedata: result,
-            memberphoto: photo
-          });
-        })
-      });
-    }
 
   render() {
       return (
         <div className="main-content">
-          <div>
-            <p>navigated to TEAM</p>
-            <button onClick={this.getFirebaseInfo}>
-              fetch team member from firebase
-            </button>
-            <p>the team member fetched from firebase: {this.state.firebasedata}</p>
-            <img className="team-member-photo" src={this.state.memberphoto}/>
-          </div>
-           {/* just a demo chart to show that d3.js renders */}
-           <DonutChart></DonutChart>
+           <BarChart data={this.state.data} width={this.state.width} height={this.state.height} />
         </div>
       )
       }

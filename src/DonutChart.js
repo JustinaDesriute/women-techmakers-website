@@ -2,6 +2,8 @@ import React from 'react';
 import { scaleOrdinal } from 'd3-scale';
 import { arc as d3Arc, pie as d3Pie } from 'd3-shape';
 import { csvParse } from 'd3-dsv';
+import logo from './wmt.png';
+
 
 // Same as data.csv
 import dataCsv from './data';
@@ -52,6 +54,7 @@ export default () => {
             </text>
           </g>
         ))}
+        <image width="300" height="300" src={ logo }></image>
       </g>
     </svg>
   );
