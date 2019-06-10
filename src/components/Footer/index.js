@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import fblogo from "../assets/fb-logo.png";
-import twitterlogo from "../assets/twitter-logo.png";
-import meetuplogo from "../assets/meetup-logo.png";
-import emailicon from "../assets/email.png";
+import fblogo from "../../assets/fb-logo.png";
+import twitterlogo from "../../assets/twitter-logo.png";
+import meetuplogo from "../../assets/meetup-logo.png";
+import emailicon from "../../assets/email.png";
 
-class SocialMediaFooter extends Component {
+class Footer extends Component {
   render() {
     return (
       <div className="social-media-footer">
@@ -57,4 +57,4 @@ class SocialMediaFooter extends Component {
   }
 }
 
-export default SocialMediaFooter;
+export default Footer;

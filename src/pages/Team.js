@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import BarChart from "../components/BarChart";
-import "./Team.css";
+import BarChart from "../components/charts/BarChart";
 
 class Team extends Component {
   constructor() {

@@ -5,9 +5,7 @@ import { csvParse } from "d3-dsv";
 import logo from "./assets/wmt.png";
 
 // Same as data.csv
-import dataCsv from "../utils/data";
-
-import "./chart.css";
+import dataCsv from "../../../utils/data";
 
 const width = 960,
   height = 500,

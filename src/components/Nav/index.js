@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Events from "../pages/Events";
-import Team from "../pages/Team";
-import Mentoring from "../pages/Mentoring";
-import Podcasts from "../pages/Podcasts";
-import JobBoard from "../pages/JobBoard";
-import Blog from "../pages/Blog";
+import Events from "../../pages/Events";
+import Team from "../../pages/Team";
+import Mentoring from "../../pages/Mentoring";
+import Podcasts from "../../pages/Podcasts";
+import JobBoard from "../../pages/JobBoard";
+import Blog from "../../pages/Blog";
 
-class HeaderNavigationBar extends Component {
+class Nav extends Component {
   render() {
     return (
       <div>
@@ -56,4 +56,4 @@ class HeaderNavigationBar extends Component {
   }
 }
 
-export default HeaderNavigationBar;
+export default Nav;
