@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import BarChart from '../BarChart';
-import './Team.css';
+import React, { Component } from "react";
+import BarChart from "../components/BarChart";
+import "./Team.css";
 
 class Team extends Component {
-
   constructor() {
     super();
     this.state = {
@@ -15,12 +14,16 @@ class Team extends Component {
   }
 
   render() {
-      return (
-        <div className="main-content">
-           <BarChart data={this.state.data} width={this.state.width} height={this.state.height} />
-        </div>
-      )
-      }
-    }
+    return (
+      <div className="main-content">
+        <BarChart
+          data={this.state.data}
+          width={this.state.width}
+          height={this.state.height}
+        />
+      </div>
+    );
+  }
+}
 
-export default Team
+export default Team;
