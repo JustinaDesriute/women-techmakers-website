@@ -13,6 +13,7 @@ class Footer extends Component {
             <a
               href="https://www.facebook.com/womentechmakersfrankfurt/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 src={fblogo}
@@ -22,7 +23,11 @@ class Footer extends Component {
             </a>
           </li>
           <li className="social-media-link">
-            <a href="https://twitter.com/WTM_Frankfurt" target="_blank">
+            <a
+              href="https://twitter.com/WTM_Frankfurt"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src={twitterlogo}
                 className="social-media-icon"
@@ -34,6 +39,7 @@ class Footer extends Component {
             <a
               href="https://www.meetup.com/Women-Techmakers-Frankfurt_Rhein-Main/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 src={meetuplogo}

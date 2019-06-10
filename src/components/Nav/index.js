@@ -1,57 +1,49 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
-import { Link } from "react-router-dom";
-import Events from "../../pages/Events";
-import Team from "../../pages/Team";
-import Mentoring from "../../pages/Mentoring";
-import Podcasts from "../../pages/Podcasts";
-import JobBoard from "../../pages/JobBoard";
-import Blog from "../../pages/Blog";
+import { NavLink } from "react-router-dom";
+import { StyledNav } from "./styled";
+
+const homepageSections = [
+  {
+    destination: "/#who-we-are",
+    title: "Who We Are"
+  },
+  {
+    destination: "/#what-we-do",
+    title: "What We Do"
+  },
+  {
+    destination: "/#events",
+    title: "Events"
+  },
+  {
+    destination: "/#vision-mission",
+    title: "Vision & Mission"
+  },
+  {
+    destination: "/#partners",
+    title: "Partners"
+  }
+];
 
 class Nav extends Component {
   render() {
     return (
-      <div>
-        <div className="nav-container">
-          <div className="navigation-link-container">
-            <Link to="/team" className="nav-link">
-              Team
-            </Link>
-          </div>
-          <div className="navigation-link-container">
-            <Link to="/events" className="nav-link">
-              Events
-            </Link>
-          </div>
-          <div className="navigation-link-container">
-            <Link to="/podcasts" className="nav-link">
-              Podcasts
-            </Link>
-          </div>
-          <div className="navigation-link-container">
-            <Link to="/mentoring" className="nav-link">
-              Mentoring
-            </Link>
-          </div>
-          <div className="navigation-link-container">
-            <Link to="/jobboard" className="nav-link">
-              Job Board
-            </Link>
-          </div>
-          <div className="navigation-link-container">
-            <Link to="/blog" className="nav-link">
-              Blog
-            </Link>
-          </div>
+      <StyledNav>
+        <NavLink to="/" exact className="nav-link">
+          Home Icon
+        </NavLink>
+        <div className="navigation-link-container">
+          {homepageSections.map(section => (
+            <NavLink
+              to={section.destination}
+              className="nav-link"
+              key={section.title}
+            >
+              {section.title}
+            </NavLink>
+          ))}
         </div>
-        <Route exact path="/" render={() => <Team />} />
-        <Route exact path="/team" render={() => <Team />} />
-        <Route exact path="/events" render={() => <Events />} />
-        <Route exact path="/podcasts" render={() => <Podcasts />} />
-        <Route exact path="/mentoring" render={() => <Mentoring />} />
-        <Route exact path="/jobboard" render={() => <JobBoard />} />
-        <Route exact path="/blog" render={() => <Blog />} />
-      </div>
+      </StyledNav>
     );
   }
 }
