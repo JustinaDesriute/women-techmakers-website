@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import fblogo from './fb-logo.png';
-import twitterlogo from './twitter-logo.png';
-import meetuplogo from './meetup-logo.png';
-import emailicon from './email.png';
+import fblogo from './global-assets/fb-logo.png';
+import twitterlogo from './global-assets/twitter-logo.png';
+import meetuplogo from './global-assets/meetup-logo.png';
+import emailicon from './global-assets/email.png';
 
 class SocialMediaFooter extends Component {
 
