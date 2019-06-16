@@ -31,7 +31,7 @@ export const primaryButton = css`
   color: #ffffff;
 
   &:hover {
-    background-color: #028ea0;
+    background-color: #4a89f8;
   }
 `;
 

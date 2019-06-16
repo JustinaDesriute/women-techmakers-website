@@ -1,13 +1,19 @@
-Women Techmakers Frankfurt website
+Women Techmakers Frankfurt Website
 
 Built with React, bootstrapped with create-react-app. We use Firebase for our API and database.
 
 ## Getting Started
 
+System Requirements:
+
+- npm
+- node version 8.9.4
+
 clone the repo
-`npm i`
+`npm install`
 `npm start`
 
-### CSS
+We are using:
 
-We are using [Styled Components](https://github.com/styled-components)
+- [Styled Components](https://github.com/styled-components)
+- [Atomic Design Pattern](http://atomicdesign.bradfrost.com/chapter-2/)
