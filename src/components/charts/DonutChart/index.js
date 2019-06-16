@@ -1,27 +1,24 @@
-import React from 'react';
-import { scaleOrdinal } from 'd3-scale';
-import { arc as d3Arc, pie as d3Pie } from 'd3-shape';
-import { csvParse } from 'd3-dsv';
-import logo from './wmt.png';
-
+import React from "react";
+import { scaleOrdinal } from "d3-scale";
+import { arc as d3Arc, pie as d3Pie } from "d3-shape";
+import { csvParse } from "d3-dsv";
+import logo from "./assets/wmt.png";
 
 // Same as data.csv
-import dataCsv from './data';
-
-import './chart.css';
+import dataCsv from "../../../utils/data";
 
 const width = 960,
   height = 500,
   radius = Math.min(width, height) / 2;
 
 const color = scaleOrdinal().range([
-  '#98abc5',
-  '#8a89a6',
-  '#7b6888',
-  '#6b486b',
-  '#a05d56',
-  '#d0743c',
-  '#ff8c00',
+  "#98abc5",
+  "#8a89a6",
+  "#7b6888",
+  "#6b486b",
+  "#a05d56",
+  "#d0743c",
+  "#ff8c00"
 ]);
 
 const arc = d3Arc()
@@ -54,7 +51,7 @@ export default () => {
             </text>
           </g>
         ))}
-        <image width="300" height="300" src={ logo }></image>
+        <image width="300" height="300" src={logo} />
       </g>
     </svg>
   );

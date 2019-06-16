@@ -1,45 +1,45 @@
-import React, { Component } from 'react';
-import firebase from '../FirebaseConfig';
+import React, { Component } from "react";
+import firebase from "../FirebaseConfig";
 
 class Blog extends Component {
-
   constructor() {
     super();
     this.state = {
       blogpost: "",
-      blogimage: "",
+      blogimage: ""
     };
   }
 
-    getBlogPosts = e => {
-      const db = firebase.firestore();
+  getBlogPosts = e => {
+    const db = firebase.firestore();
 
-      db.collection('blogposts').get().then((snapshot) => {
+    db.collection("blogposts")
+      .get()
+      .then(snapshot => {
         snapshot.docs.forEach(doc => {
           let fetcheddata = Object.values(doc.data());
           let result = fetcheddata[1];
           let img = fetcheddata[0];
           this.setState({
             blogpost: result,
-            blogimage: img,
+            blogimage: img
           });
-        })
+        });
       });
-    }
+  };
 
   render() {
-
     return (
-        <div className="main-content">
-          <p>navigated to: BLOG</p>
-          <button onClick={this.getBlogPosts}>
-            fetch team member from firebase
-          </button>
-          <img src={this.state.blogimage}/>
-          <p>Blog post fetched from firebase: {this.state.blogpost}</p>
-        </div>
-    )
+      <div className="main-content">
+        <p>navigated to: BLOG</p>
+        <button onClick={this.getBlogPosts}>
+          fetch team member from firebase
+        </button>
+        <img src={this.state.blogimage} alt="Team Member Headshot" />
+        <p>Blog post fetched from firebase: {this.state.blogpost}</p>
+      </div>
+    );
   }
 }
 
-export default Blog
+export default Blog;
