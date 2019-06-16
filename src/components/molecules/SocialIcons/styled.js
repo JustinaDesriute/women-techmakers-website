@@ -11,5 +11,9 @@ export const StyledSocialIcons = styled.div`
     path {
       fill: ${props => props.iconColor};
     }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
