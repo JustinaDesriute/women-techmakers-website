@@ -48,7 +48,7 @@ const Nav = () => {
             ))}
           </div>
           <div className="social-wrapper">
-            <SocialIcons iconWidth="40px" iconColor="#FFFFFF" />
+            <SocialIcons iconWidth="30px" iconColor="#FFFFFF" />
           </div>
         </div>
       </SectionWrapper>

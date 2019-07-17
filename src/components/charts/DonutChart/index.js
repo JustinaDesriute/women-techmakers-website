@@ -2,7 +2,7 @@ import React from "react";
 import { scaleOrdinal } from "d3-scale";
 import { arc as d3Arc, pie as d3Pie } from "d3-shape";
 import { csvParse } from "d3-dsv";
-import logo from "./assets/wmt.png";
+import logo from "./assets/wtm.png";
 
 // Same as data.csv
 import dataCsv from "../../../utils/data";

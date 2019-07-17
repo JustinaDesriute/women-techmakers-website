@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "../../assets/wmt.png";
+import logo from "../../assets/wtm.png";
 
 class Mentoring extends Component {
   render() {

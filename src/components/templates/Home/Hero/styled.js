@@ -1,13 +1,36 @@
 import styled from "styled-components";
 
 export const StyledHomeHero = styled.div`
-  height: 100vh;
-  background: url("WTM-hero.png") top center;
-  background-size: cover;
+  
+.who-we-are {
+    background-color: red;
+    height: 100vh;
+  }
 
-  .content-wrapper {
-    position: relative;
-    top: 25%;
+  .what-we-do {
+    background-color: transparent;
+    height: 100vh;
+  }
+
+  .events {
+    background-color: rgb(221, 232, 253);
+    height: 100vh;
+  }
+
+  .vision-mission {
+    background-color: transparent;
+    height: 100vh;
+  }
+
+  .partners {
+    background-color: rgb(221, 232, 253);
+    height: 100vh;
+  }
+
+  .home-section {
+    background: url("home-section3.png") top center;
+    background-size: cover;
+    height: 100vh;
     text-align: center;
 
     .headline {

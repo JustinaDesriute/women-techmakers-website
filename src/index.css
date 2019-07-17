@@ -133,10 +133,75 @@ p {
 }
 
 .main-content {
-  background: rgb(107, 229, 185);
   height: 100vh;
-  width: 100vw;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.grey-ffm {
+  background: url("ffm_grey2.png") top center;
+  background-size: cover;
+}
+
+.team-text-wrapper {
+  width: 40%;
+  height: 50%;
+}
+
+.team-headline {
+  font-family: "Playlist-Script";
+  font-size: 50px;
+}
+
+.team-description{
+  font-family: "Open Sans Light";
+  font-size: 18px;
+}
+
+.activities-text-wrapper {
+  width: 40%;
+  height: 50%;
+}
+
+.activities-headline {
+  font-family: "Playlist-Script";
+  font-size: 50px;
+}
+
+.activities-description{
+  font-family: "Open Sans Light";
+  font-size: 18px;
+}
+
+.vision-text-wrapper {
+  width: 40%;
+  height: 50%;
+}
+
+.vision-headline {
+  font-family: "Playlist-Script";
+  font-size: 50px;
+}
+
+.vision-description{
+  font-family: "Open Sans Light";
+  font-size: 18px;
+}
+
+.partnerships-text-wrapper {
+  width: 40%;
+  height: 50%;
+}
+
+.partnerships-headline {
+  font-family: "Playlist-Script";
+  font-size: 50px;
+}
+
+.partnerships-description{
+  font-family: "Open Sans Light";
+  font-size: 18px;
 }
 
 /* chart */
@@ -153,9 +218,11 @@ p {
 /* Footer */
 
 .footer {
-  background: rgb(86, 190, 167);
+  background-color: white;
+  display: flex;
+  flex-direction: row;
   width: 100vw;
-  height: 10vh;
+  height: 13vh;
   position: fixed;
   bottom: 0;
 }

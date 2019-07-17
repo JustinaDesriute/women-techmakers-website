@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const StyledNav = styled.nav`
-  position: fixed;
   width: 100%;
+  background: url("nav-bar.png") top center;
+  background-size: cover; // cut part of the image for the top section
 
   .nav-inner {
     display: flex;
@@ -15,7 +16,7 @@ export const StyledNav = styled.nav`
     margin-right: 24px;
 
     svg {
-      width: 50px;
+      width: 35px;
       path {
         fill: #ffffff;
       }
