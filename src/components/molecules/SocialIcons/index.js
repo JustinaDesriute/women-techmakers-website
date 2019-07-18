@@ -8,10 +8,18 @@ import { StyledSocialIcons } from "./styled";
 const SocialIcons = props => {
   return (
     <StyledSocialIcons iconWidth={props.iconWidth} iconColor={props.iconColor}>
-      <TwitterIcon />
-      <FacebookIcon />
-      <MeetupIcon />
-      <LinkedinIcon />
+      <a href="https://twitter.com/WTM_Frankfurt" target="_blank">
+        <TwitterIcon />
+      </a>
+      <a href="https://www.facebook.com/womentechmakersfrankfurt/" target="_blanket">
+        <FacebookIcon />
+      </a>
+      <a href="https://www.meetup.com/Women-Techmakers-Frankfurt_Rhein-Main/" target="_blanket">
+        <MeetupIcon />
+      </a>
+      <a href="https://www.linkedin.com/company/11827278/" target="_blanket">
+        <LinkedinIcon />
+      </a>
     </StyledSocialIcons>
   );
 };

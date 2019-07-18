@@ -136,7 +136,16 @@ p {
   height: 100vh;
   text-align: center;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
+}
+
+.main-content-vertical {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .grey-ffm {
@@ -144,64 +153,26 @@ p {
   background-size: cover;
 }
 
-.team-text-wrapper {
+.text-wrapper {
+  height: 50%;
+  overflow: scroll;
+  width: 40%;
+}
+
+.headline {
+  color: #464646;
+  font-family: "Playlist-Script";
+  font-size: 48px;
+}
+
+.description{
+  font-family: "Open Sans Regular";
+  font-size: 16px;
+}
+
+.text-wrapper {
   width: 40%;
   height: 50%;
-}
-
-.team-headline {
-  font-family: "Playlist-Script";
-  font-size: 50px;
-}
-
-.team-description{
-  font-family: "Open Sans Light";
-  font-size: 18px;
-}
-
-.activities-text-wrapper {
-  width: 40%;
-  height: 50%;
-}
-
-.activities-headline {
-  font-family: "Playlist-Script";
-  font-size: 50px;
-}
-
-.activities-description{
-  font-family: "Open Sans Light";
-  font-size: 18px;
-}
-
-.vision-text-wrapper {
-  width: 40%;
-  height: 50%;
-}
-
-.vision-headline {
-  font-family: "Playlist-Script";
-  font-size: 50px;
-}
-
-.vision-description{
-  font-family: "Open Sans Light";
-  font-size: 18px;
-}
-
-.partnerships-text-wrapper {
-  width: 40%;
-  height: 50%;
-}
-
-.partnerships-headline {
-  font-family: "Playlist-Script";
-  font-size: 50px;
-}
-
-.partnerships-description{
-  font-family: "Open Sans Light";
-  font-size: 18px;
 }
 
 /* chart */
@@ -219,12 +190,13 @@ p {
 
 .footer {
   background-color: white;
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  height: 13vh;
-  position: fixed;
   bottom: 0;
+  display: flex;
+  height: 13vh;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
 }
 
 /* Events */
