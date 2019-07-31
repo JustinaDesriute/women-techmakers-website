@@ -154,7 +154,7 @@ p {
 }
 
 .text-wrapper {
-  height: 50%;
+  /* height: 50%; */
   overflow: scroll;
   width: 40%;
 }
@@ -168,11 +168,18 @@ p {
 .description{
   font-family: "Open Sans Regular";
   font-size: 16px;
+  margin: 20px 20px 40px 20px;
+  text-align: justify;
 }
 
-.text-wrapper {
-  width: 40%;
-  height: 50%;
+.pictureContainer {
+  width: 50%;
+}
+
+.picture {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* chart */
@@ -195,6 +202,7 @@ p {
   height: 13vh;
   flex-direction: row;
   justify-content: space-between;
+  padding: 20px;
   position: fixed;
   width: 100vw;
 }

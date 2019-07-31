@@ -8,7 +8,9 @@ import Events from "../../../pages/Events";
 import Vision from "../../../pages/Vision";
 import Partnerships from "../../../pages/Partnerships";
 
+
 const HomeHero = () => {
+
   return (
     <div>
       <StyledHomeHero>
@@ -16,7 +18,9 @@ const HomeHero = () => {
           <h1 className="headline">Never Network Alone</h1>
           <h2 className="subheadline">Women Techmakers Frankfurt & Rhine-Main</h2>
           <WTMLogo className="wtm-logo" />
-          <Button type="primary">Join the Community!</Button>
+          <a href="https://www.meetup.com/Women-Techmakers-Frankfurt_Rhein-Main/" target="_blanket">
+            <Button type="primary">Join the Community!</Button>
+          </a>
         </div>
         <div className="who-we-are">
           <Team></Team>
@@ -37,5 +41,6 @@ const HomeHero = () => {
     </div>
   );
 };
+
 
 export default HomeHero;

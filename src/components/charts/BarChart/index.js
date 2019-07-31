@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import * as d3 from "d3";
 import logo from '../../../assets/wtm.png';
-
+import an from '../../../assets/an.png';
+import ann from '../../../assets/ann.png';
+import jd from '../../../assets/jd.png';
+import mi from '../../../assets/mi.png';
+import mo from '../../../assets/mo.png';
+import na from '../../../assets/na.png';
+import te from '../../../assets/te.png';
 
 class BarChart extends Component
 {
@@ -12,6 +18,7 @@ class BarChart extends Component
 
   drawChart()
   {
+
     let width = window.innerWidth * 0.7;
 
     let height = window.innerHeight * 0.8;
@@ -19,8 +26,6 @@ class BarChart extends Component
     let margin = { top: 10, right: 30, bottom: 30, left: 40 },
       fullwidth = width - margin.left - margin.right,
       fullheight = height - margin.top - margin.bottom;
-
-      console.log('margin', margin)
 
     let svg = d3.select(".main-content")
       .append("svg")
@@ -35,92 +40,77 @@ class BarChart extends Component
       "nodes": [
         {
           "id": 1,
-          "name": "A",
+          "name": "Anastasia",
+          "title": "Marketing Communications",
+          "img": an,
         },
         {
           "id": 2,
-          "name": "B",
+          "name": "Anna",
+          "title": "Integration Engineer",
+          "img": ann,
         },
         {
           "id": 3,
-          "name": "C",
+          "name": "Justina",
+          "title": "Frontend Software Engineer",
+          "img": jd,
         },
         {
           "id": 4,
-          "name": "D",
+          "name": "Michael",
+          "title": "Coach, Lecturer",
+          "img": mi,
         },
         {
           "id": 5,
-          "name": "E",
+          "name": "Mona",
+          "title": "Marketing Executive",
+          "img": mo,
         },
         {
           "id": 6,
-          "name": "F",
+          "name": "Natalie",
+          "title": "Frontend Web Developer",
+          "img": na,          
         },
         {
           "id": 7,
-          "name": "G",
+          "name": "Theresa",
+          "title": "PM for Digitization",
+          "img": te,
         },
-        {
-          "id": 8,
-          "name": "H",
-        },
-        {
-          "id": 9,
-          "name": "I",
-        },
-        {
-          "id": 10,
-          "name": "J",
-        }
       ],
       "links": [
-
         {
-          "source": 1,
-          "target": 2
+          "source": 7,
+          "target": 1
         },
         {
-          "source": 1,
-          "target": 5
-        },
-        {
-          "source": 1,
-          "target": 6
-        },
-
-        {
-          "source": 2,
+          "source": 6,
           "target": 3
-        },
-        {
-          "source": 2,
-          "target": 7
-        }
-        ,
-
-        {
-          "source": 3,
-          "target": 4
-        },
-        {
-          "source": 8,
-          "target": 3
-        }
-        ,
-        {
-          "source": 4,
-          "target": 5
-        }
-        ,
-
-        {
-          "source": 4,
-          "target": 9
         },
         {
           "source": 5,
-          "target": 10
+          "target": 2
+        },
+
+        {
+          "source": 7,
+          "target": 4
+        },
+        {
+          "source": 5,
+          "target": 7
+        }
+        ,
+        {
+          "source": 7,
+          "target": 4
+        },
+        {
+          "source": 7,
+          "target": 6
         }
       ]
     }
@@ -142,7 +132,7 @@ class BarChart extends Component
         .id(function (d) { return d.id; })
         .links(alldata.links)
       )
-      .force("charge", d3.forceManyBody().strength(-800))
+      .force("charge", d3.forceManyBody().strength(-2400))
       .force("center", d3.forceCenter(width / 2, height / 2))
       .on("end", ticked);
 
@@ -155,11 +145,19 @@ class BarChart extends Component
         .attr("y2", function (d) { return d.target.y; });
 
       node
+        .append("text")
+        .attr("class", "nodetext")
+        .attr("x", d => d.x + 30)
+        .attr("y", d => d.y)
+        .attr("fill", 'black')
+        .text(function (d) { return d.name; });
+      node
         .append("image")
-        .attr("width", "50")
-        .attr("height", "50")
-        .attr("xlink:href", logo) // loop over an array or imgs
+        .attr("width", "60")
+        .attr("height", "60")
+        .attr("xlink:href", function (d) { return d.img; })
         .attr('transform', function (d) { return 'translate(' + (d.x - 30) + ',' + (d.y - 30) + ')'; })
+        .on("click", function (d) { console.log('image clicked!', d.title) });
     }
 
   }
